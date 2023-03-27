@@ -28,11 +28,10 @@ public class Main {
         }
     }
 
-    public static Boolean check(int n, ArrayList<Product> arr){
+    public static Boolean check(int n, ArrayList<Product> arr) {
         if (n > 0 & n <= arr.size()) {
             return true;
-        }
-        else {
+        } else {
             System.out.println("Некорректный ввод данных");
             return false;
         }
@@ -47,7 +46,7 @@ public class Main {
 
     public static void printArray2(ArrayList<Product> products) {
         for (int i = 0; i < products.size(); i++) {
-            System.out.println((i+1) + ":  " + products.get(i));
+            System.out.println((i + 1) + ":  " + products.get(i));
         }
         System.out.println("\n");
     }
@@ -142,7 +141,7 @@ public class Main {
         Boolean fl3 = false;
 
 
-        while (fl){
+        while (fl) {
             System.out.println("\tВойти в свой аккаунт  - - - нажмите '1'");
             System.out.println("\tПросмотр товаров  - - - - - нажмите '2'");
             System.out.println("\tВыход из программы  - - - - нажмите '9'");
@@ -159,9 +158,10 @@ public class Main {
                     String passwordIn = iScanner.next();
                     flcheck = user1.check(loginIn, passwordIn);
                     if (flcheck) {
-                        fl = false;}
-                    else {
-                        fl = true;}
+                        fl = false;
+                    } else {
+                        fl = true;
+                    }
                     break;
                 case 2:
                     System.out.println("\t- -- Товары по категориям -- -");
@@ -198,7 +198,7 @@ public class Main {
                     break;
             }
 
-            while (flcheck){
+            while (flcheck) {
                 numShop = listCategory_1.size() +
                         listCategory_2.size() +
                         listCategory_3.size() +
@@ -242,8 +242,7 @@ public class Main {
                                         listCategory_1.remove(n - 1);
                                         System.out.println("Товар перемещен в корзину");
                                     }
-                                }
-                                else {
+                                } else {
                                     System.out.println("В данной кагегории нет товаров");
                                 }
                                 break;
@@ -261,8 +260,7 @@ public class Main {
                                         listCategory_2.remove(n - 1);
                                         System.out.println("Товар перемещен в корзину");
                                     }
-                                }
-                                else {
+                                } else {
                                     System.out.println("В данной кагегории нет товаров");
                                 }
                                 break;
@@ -280,8 +278,7 @@ public class Main {
                                         listCategory_3.remove(n - 1);
                                         System.out.println("Товар перемещен в корзину");
                                     }
-                                }
-                                else {
+                                } else {
                                     System.out.println("В данной кагегории нет товаров");
                                 }
                                 break;
@@ -299,8 +296,7 @@ public class Main {
                                         listCategory_4.remove(n - 1);
                                         System.out.println("Товар перемещен в корзину");
                                     }
-                                }
-                                else {
+                                } else {
                                     System.out.println("В данной кагегории нет товаров");
                                 }
                                 break;
@@ -321,8 +317,7 @@ public class Main {
                                 }
 //                                basketUser = (ArrayList) basketShop.clone();
                                 basketShop.clear();
-                            }
-                            else {
+                            } else {
                                 System.out.println("В корзине нет товаров");
                             }
                         }
@@ -335,141 +330,6 @@ public class Main {
             }
 
         }
-
-
-//        do {
-//            numShop = listCategory_1.size() +
-//                    listCategory_2.size() +
-//                    listCategory_3.size() +
-//                    listCategory_4.size();
-//            System.out.println("Купленные товары: " + basketUser.size());
-//            System.out.println("В корзине товаров: " + basketShop.size());
-//            System.out.println("В магазине товаров: " + numShop);
-//
-//            System.out.println("\tВыйти из аккаунта - - - - - нажмите '1'");
-//            System.out.println("\tПросмотр товаров  - - - - - нажмите '2'");
-//            System.out.println("\tКорзина - - - - - - - - - - нажмите '3'");
-//            System.out.println("\tВыход из программы  - - - - нажмите '9'");
-//            System.out.print("\nВведите число -> ");
-//            int n = iScanner.nextInt();
-//
-//            switch (n) {
-//                case 1:
-//                    fl = true;
-//                    flcheck = false;
-//                    break;
-//                case 2:
-//                    System.out.println("\t- -- Товары по категориям -- -");
-//                    System.out.println(computer.getName() + "  - - - - - - - - - - - нажмите '1'");
-//                    System.out.println(screens.getName() + "  - - - - - - - - - - - нажмите '2'");
-//                    System.out.println(officeEquement.getName() + "  - нажмите '3'");
-//                    System.out.println(inputDevices.getName() + "  - - - - - - - нажмите '4'");
-//                    System.out.println("\tВыход из программы - нажмите '9'");
-//                    System.out.print("\nВведите число -> ");
-//                    n = iScanner.nextInt();
-//                    switch (n) {
-//                        case 1:
-//                            System.out.println(computer.getName());
-//                            printArray(listCategory_1);
-//                            fl1 = listCategory_1.size() != 0 && request_1(iScanner);
-//                            if (fl1) {
-//                                System.out.print("Для перемещения товара в корзину");
-//                                System.out.print(" введите номер товара -> ");
-//                                n = iScanner.nextInt();
-//                                fl3 = check(n, listCategory_1);
-//                                if (fl3) {
-//                                    basketShop.add(listCategory_1.get(n - 1));
-//                                    listCategory_1.remove(n - 1);
-//                                    System.out.println("Товар перемещен в корзину");
-//                                }
-//                            }
-//                            else {
-//                                System.out.println("В данной кагегории нет товаров");
-//                            }
-//                            break;
-//                        case 2:
-//                            System.out.println(screens.getName());
-//                            printArray(listCategory_2);
-//                            fl1 = listCategory_2.size() != 0 && request_1(iScanner);
-//                            if (fl1) {
-//                                System.out.print("Для перемещения товара в корзину");
-//                                System.out.print(" введите номер товара -> ");
-//                                n = iScanner.nextInt();
-//                                fl3 = check(n, listCategory_2);
-//                                if (fl3) {
-//                                    basketShop.add(listCategory_2.get(n - 1));
-//                                    listCategory_2.remove(n - 1);
-//                                    System.out.println("Товар перемещен в корзину");
-//                                }
-//                            }
-//                            else {
-//                                System.out.println("В данной кагегории нет товаров");
-//                            }
-//                            break;
-//                        case 3:
-//                            System.out.println(officeEquement.getName());
-//                            printArray(listCategory_3);
-//                            fl1 = listCategory_3.size() != 0 && request_1(iScanner);
-//                            if (fl1) {
-//                                System.out.print("Для перемещения товара в корзину");
-//                                System.out.print(" введите номер товара -> ");
-//                                n = iScanner.nextInt();
-//                                fl3 = check(n, listCategory_3);
-//                                if (fl3) {
-//                                    basketShop.add(listCategory_3.get(n - 1));
-//                                    listCategory_3.remove(n - 1);
-//                                    System.out.println("Товар перемещен в корзину");
-//                                }
-//                            }
-//                            else {
-//                                System.out.println("В данной кагегории нет товаров");
-//                            }
-//                            break;
-//                        case 4:
-//                            System.out.println(inputDevices.getName());
-//                            printArray(listCategory_4);
-//                            fl1 = listCategory_4.size() != 0 && request_1(iScanner);
-//                            if (fl1) {
-//                                System.out.print("Для перемещения товара в корзину");
-//                                System.out.print(" введите номер товара -> ");
-//                                n = iScanner.nextInt();
-//                                fl3 = check(n, listCategory_4);
-//                                if (fl3) {
-//                                    basketShop.add(listCategory_4.get(n - 1));
-//                                    listCategory_4.remove(n - 1);
-//                                    System.out.println("Товар перемещен в корзину");
-//                                }
-//                            }
-//                            else {
-//                                System.out.println("В данной кагегории нет товаров");
-//                            }
-//                            break;
-//                    }
-//                    break;
-//                case 3:
-//                    if (basketShop.size() == 0) {
-//                        System.out.println("В корзине нет товаров!");
-//                    } else {
-//                        System.out.println("В корзине:");
-//                        printArray2(basketShop);
-//                        fl2 = request_2(iScanner);
-//                        if (fl2) {
-//                            System.out.println("Транзакция прошла успешна");
-//                            System.out.println("Спасибо Вам!\n");
-//                            basketUser = (ArrayList) basketShop.clone();
-//                            basketShop.clear();
-//                        }
-//                        else {
-//                            System.out.println("В корзине нет товаров");
-//                        }
-//                    }
-//                    break;
-//                case 9:
-//                    System.out.print("Завершение программы.\n\n");
-//                    flcheck = false;
-//                    break;
-//            }
-//        } while (flcheck);
 
         iScanner.close();
     }
