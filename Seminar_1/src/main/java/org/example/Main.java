@@ -205,6 +205,8 @@ public class Main {
                 System.out.println("\tВыйти из аккаунта - - - - - нажмите '1'");
                 System.out.println("\tПросмотр товаров  - - - - - нажмите '2'");
                 System.out.println("\tКорзина - - - - - - - - - - нажмите '3'");
+                System.out.println("\tПокупки - - - - - - - - - - нажмите '4'");
+
                 System.out.println("\tВыход из программы  - - - - нажмите '9'");
                 System.out.print("\nВведите число -> ");
                 n = iScanner.nextInt();
@@ -315,6 +317,14 @@ public class Main {
                             } else {
                                 System.out.println("В корзине нет товаров");
                             }
+                        }
+                        break;
+                    case 4:
+                        if (basketUser.size() == 0) {
+                            System.out.println("Нет купленых товаров!");
+                        } else {
+                            System.out.println("Покупки:");
+                            printArray2(basketUser);
                         }
                         break;
                     case 9:
