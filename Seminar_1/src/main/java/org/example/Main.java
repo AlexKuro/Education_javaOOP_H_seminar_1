@@ -121,7 +121,7 @@ public class Main {
 
         User user1 = new User("user", "1234");
         ArrayList<Product> basketUser = new ArrayList<>();
-        user1.setUserBasket(basketUser);// корзина купленных товаров
+        user1.setUserBasket(basketUser); // корзина купленных товаров
 
 
         System.out.print("\033[H\033[2J"); // очистка консоли
