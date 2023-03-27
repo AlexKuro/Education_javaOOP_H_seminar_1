@@ -10,6 +10,7 @@ public class Category {
     public Category() {
 
     }
+
     public Category(String name, ArrayList<Product> products) {
         this.name = name;
         this.products = products;
@@ -31,11 +32,6 @@ public class Category {
     public void setProducts(ArrayList<Product> products) {
         this.products = products;
     }
-//    public void printArray(ArrayList<Product> products){
-//        for (int i = 0; i < products.size(); i++) {
-//            System.out.println(products.get(i));
-//        }
-//    }
 
     @Override
     public String toString() {

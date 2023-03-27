@@ -113,12 +113,7 @@ public class Main {
         listCategory_4.add(inDev_4);
 
 
-        Integer numBasket = 0;
-        Integer numShop =
-                listCategory_1.size() +
-                        listCategory_2.size() +
-                        listCategory_3.size() +
-                        listCategory_4.size();
+        Integer numShop = 0;
 
         Basket basket = new Basket();
         ArrayList<Product> basketShop = new ArrayList();

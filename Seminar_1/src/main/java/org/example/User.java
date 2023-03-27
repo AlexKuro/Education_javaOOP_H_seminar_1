@@ -42,11 +42,11 @@ public class User {
      *
      * @param loginIn
      * @param passwordIn
-     * @return true, если логин и пароль вернны
+     * @return true, если логин и пароль верны
      */
     public boolean check(String loginIn, String passwordIn) {
         if (loginIn.equals(login) && passwordIn.equals(password)) {
-            System.out.println("Здравствуйте " + login);
+            System.out.println("\nЗдравствуйте " + login);
             System.out.println("Аутентификация пользователя прошла успешно!");
             return true;
         } else {
